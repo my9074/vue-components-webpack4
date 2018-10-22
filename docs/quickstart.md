@@ -1,21 +1,4 @@
-# vue-components-webpack4
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
-UI component library based on webpack4 + babel7 + vue implementation
-
-# Install
-Using npm:
-```shell
-npm install sk-element-webpack --save
-```
-
-Using a script tag for global use:
-
-```html
-<script type="text/javascript" src="sk-element.min.js"></script>
-```
-
-# Usage
+# quick start
 
 ## Fully import
 In main.js:
@@ -76,11 +59,3 @@ new Vue({
   render: h => h(App)
 })
 ```
-
-# Features
-- [x] Support on-demand loading
-- [ ] I18n
-- [ ] Add CLI to support rapid development
-- [x] Example docs with vuepress
-- [ ] Unit Test
-
