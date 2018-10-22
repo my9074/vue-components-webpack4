@@ -1,25 +1,35 @@
 {
   "name": "sk-element-webpack",
-  "version": "1.0.0",
+  "version": "0.0.1-alpha.2",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/sk-element.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "",
-    "build:dist": "cross-env NODE_ENV=production webpack --config ./build/webpack.dist.prod.conf.js"
+    "build:dist": "webpack --config ./build/webpack.dist.conf.js",
+    "build:components": "webpack --config ./build/webpack.dist.component.conf.js",
+    "clean": "rimraf dist",
+    "dist": "npm run clean && npm run build:dist && npm run build:components"
   },
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@vue/babel-preset-app": "^3.0.5",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
-    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.7.0",
     "eslint-plugin-vue": "^5.0.0-beta.3",
     "mini-css-extract-plugin": "^0.4.4",
+    "rimraf": "^2.6.2",
     "url-loader": "^1.1.2",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",

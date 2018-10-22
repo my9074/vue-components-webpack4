@@ -1,7 +1,6 @@
 'use strict'
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 function resolve(dir) {
 	return path.join(__dirname, '..', dir)
@@ -28,9 +27,7 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					process.env.NODE_ENV !== 'production'
-						? 'vue-style-loader'
-						: MiniCssExtractPlugin.loader,
+					'vue-style-loader',
 					'css-loader'
 				]
 			},
@@ -61,11 +58,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new VueLoaderPlugin(),
-		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css'
-		})
+		new VueLoaderPlugin()
 	],
 	node: {
 		setImmediate: false,

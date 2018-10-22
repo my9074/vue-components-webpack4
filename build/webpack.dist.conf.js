@@ -2,8 +2,6 @@
 const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const config = merge(baseConfig, {
 	mode: 'production',
@@ -27,14 +25,7 @@ const config = merge(baseConfig, {
 			commonjs2: 'vue',
 			amd: 'vue'
 		}
-	},
-	plugins: [
-		new CleanWebpackPlugin(['dist']),
-		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css'
-		})
-	]
+	}
 })
 
 module.exports = config
