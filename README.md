@@ -1,4 +1,6 @@
 # vue-components-webpack4
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 UI component library based on webpack4 + babel7 + vue implementation
 
 # Install
@@ -77,7 +79,8 @@ new Vue({
 
 # Features
 - [x] Support on-demand loading
-- [ ] i18n
+- [ ] I18n
 - [ ] Add CLI to support rapid development
 - [ ] Example docs with vuepress
+- [ ] Unit Test
 

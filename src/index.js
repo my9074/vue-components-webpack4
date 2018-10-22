@@ -2,7 +2,7 @@
 import Text from '../packages/text'
 const components = [Text]
 
-const install = function(Vue, opts = {}) {
+const install = function(Vue) {
 	if (install.installed) return
 
 	components.map(component => {

@@ -9,7 +9,9 @@
     "build:dist": "webpack --config ./build/webpack.dist.conf.js",
     "build:components": "webpack --config ./build/webpack.dist.component.conf.js",
     "clean": "rimraf dist",
-    "dist": "npm run clean && npm run build:dist && npm run build:components"
+    "dist": "npm run clean && npm run build:dist && npm run build:components",
+    "lint": "eslint src/**/* packages/**/*.{js,vue} build/**/* --quiet",
+    "commit": "git-cz"
   },
   "author": "",
   "license": "ISC",
@@ -24,8 +26,8 @@
     "@babel/preset-env": "^7.1.0",
     "@vue/babel-preset-app": "^3.0.5",
     "babel-loader": "^8.0.4",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.7.0",
     "eslint-plugin-vue": "^5.0.0-beta.3",
     "mini-css-extract-plugin": "^0.4.4",
@@ -38,5 +40,10 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
     "webpack-merge": "^4.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
