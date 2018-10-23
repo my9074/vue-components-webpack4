@@ -1,5 +1,7 @@
 ##### Demo
-<sk-text msg="I can work"></sk-text>
+<Container>
+  <sk-text msg="I can work"></sk-text>
+</Container>
 
 ``` vue
 <template>
