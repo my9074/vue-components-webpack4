@@ -1,7 +1,7 @@
 # vue-components-webpack4
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-UI component library based on webpack4 + babel7 + vue implementation
+UI component library template based on webpack4 + babel7 + vue implementation
 
 # Install
 Using npm:

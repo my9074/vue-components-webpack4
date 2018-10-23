@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/vue-components-webpack4/',
 	title: 'sk-element components',
 	description: 'sk-element UI components',
 	markdown: {
