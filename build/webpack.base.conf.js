@@ -10,7 +10,8 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.vue', '.json'],
 		alias: {
-			vue$: 'vue/dist/vue.runtime.js'
+			vue$: 'vue/dist/vue.runtime.js',
+			'@': resolve('src')
 		}
 	},
 	module: {
