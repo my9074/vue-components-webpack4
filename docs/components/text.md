@@ -10,9 +10,7 @@
 <script>
   export default {
   data () {
-    return {
-      msg: 'Highlighted!'
-    }
+    return {}
   }
 }
 </script>

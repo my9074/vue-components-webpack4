@@ -83,7 +83,7 @@ new Vue({
 
 # Features
 - [x] Support on-demand loading
-- [ ] I18n
+- [x] I18n
 - [ ] Add CLI to support rapid development
 - [x] Example docs with vuepress
 - [ ] Unit Test
