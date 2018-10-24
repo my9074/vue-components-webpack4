@@ -3,8 +3,9 @@ const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 const Components = require('../components.json')
+const config = require('./config')
 
-const config = merge(baseConfig, {
+const webpackConfig = merge(baseConfig, {
 	mode: 'production',
 	entry: Components,
 	output: {
@@ -14,14 +15,7 @@ const config = merge(baseConfig, {
 		chunkFilename: '[id].js',
 		libraryTarget: 'commonjs2'
 	},
-	externals: {
-		vue: {
-			root: 'Vue',
-			commonjs: 'vue',
-			commonjs2: 'vue',
-			amd: 'vue'
-		}
-	}
+	externals: config.externals
 })
 
-module.exports = config
+module.exports = webpackConfig

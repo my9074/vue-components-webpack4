@@ -11,7 +11,8 @@ module.exports = {
 		extensions: ['.js', '.vue', '.json'],
 		alias: {
 			vue$: 'vue/dist/vue.runtime.js',
-			'@': resolve('src')
+			'@': resolve('src'),
+			package: resolve('package')
 		}
 	},
 	module: {
