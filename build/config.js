@@ -16,14 +16,18 @@ mixinsList.forEach(function(file) {
 })
 
 externals = [Object.assign({
-	vue: 'vue'
+	vue: 'vue',
+	axios: 'axios'
 }, externals)]
 
-exports.vue = {
-	root: 'Vue',
-	commonjs: 'vue',
-	commonjs2: 'vue',
-	amd: 'vue'
+exports.baseExternals = {
+	vue: {
+		root: 'Vue',
+		commonjs: 'vue',
+		commonjs2: 'vue',
+		amd: 'vue'
+	},
+	axios: 'axios'
 }
 
 exports.externals = externals
