@@ -33,6 +33,7 @@ Then edit .babelrc/babel.config.js:
     // other config
   ],
   "plugins": [
+    [
       "component",
       {
         "libraryName": "sk-element-webpack",
@@ -40,6 +41,7 @@ Then edit .babelrc/babel.config.js:
         "style": false
       }
     ]
+  ]
 }
 ```
 

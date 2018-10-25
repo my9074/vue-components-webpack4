@@ -1,6 +1,6 @@
 {
   "name": "sk-element-webpack",
-  "version": "0.0.1-alpha.9",
+  "version": "0.0.1-alpha.10",
   "description": "",
   "main": "./dist/sk-element.min.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "",
     "build:dist": "webpack --config ./build/webpack.dist.conf.js",
     "build:components": "webpack --config ./build/webpack.dist.component.conf.js",
-    "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir dist --ignore src/*.js,src/api",
+    "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir dist --ignore src/*.js",
     "clean": "rimraf dist",
     "dist": "npm run clean && npm run build:utils && npm run build:dist && npm run build:components",
     "docs:dev": "vuepress dev docs",
