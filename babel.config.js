@@ -1,10 +1,20 @@
 module.exports = {
-	presets: ['@vue/babel-preset-app'],
+	presets: [
+		[
+			'@babel/preset-env',
+			{
+				modules: 'false'
+			}
+		]
+	],
+	plugins: [
+		'@babel/plugin-proposal-object-rest-spread',
+		'@babel/plugin-transform-object-assign',
+		'@babel/plugin-transform-regenerator'
+	],
 	env: {
 		utils: {
-			presets: [
-				['@vue/babel-preset-app', { modules: 'commonjs', useBuiltIns: false }]
-			],
+			presets: [['@babel/preset-env', { modules: 'commonjs' }]],
 			plugins: [
 				[
 					'module-resolver',
