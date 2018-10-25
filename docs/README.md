@@ -1,6 +1,8 @@
 # Install
 Using npm:
 ```shell
+# Requried axios lib
+# npm i axios --save
 npm install sk-element-webpack --save
 ```
 

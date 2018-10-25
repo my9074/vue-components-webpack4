@@ -6,6 +6,8 @@ UI component library template based on webpack4 + babel7 + vue implementation
 # Install
 Using npm:
 ```shell
+# Requried axios lib
+# npm i axios --save
 npm install sk-element-webpack --save
 ```
 
