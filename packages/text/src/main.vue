@@ -6,6 +6,7 @@
 </template>
 <script>
 import Locale from '@/mixins/locale'
+import { fetchDemo } from '@/api/demo'
 
 export default {
 	name: 'SkText',
@@ -20,6 +21,9 @@ export default {
 		emptyText() {
 			return this.t('sk.text.emptyText')
 		}
+	},
+	created () {
+		fetchDemo()
 	}
 }
 </script>
