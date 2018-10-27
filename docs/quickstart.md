@@ -1,19 +1,20 @@
 # quick start
 
 ## Fully import
+
 In main.js:
+
 ```javascript
-import Vue from 'vue';
-import SKElement from 'sk-element-webpack';
-import App from './App.vue'
+import Vue from "vue";
+import SKElement from "sk-element-webpack";
+import App from "./App.vue";
 
 Vue.use(SKElement);
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App)
-})
-
+});
 ```
 
 ## On demand
@@ -27,6 +28,7 @@ npm install babel-plugin-component --save-dev
 ```
 
 Then edit .babelrc/babel.config.js:
+
 ```json
 {
   "presets": [
@@ -38,7 +40,10 @@ Then edit .babelrc/babel.config.js:
       {
         "libraryName": "sk-element-webpack",
         "libDir": "dist",
-        "style": false
+        "styleLibrary": {
+          "name": "theme-default",
+          "base": false
+        }
       }
     ]
   ]
@@ -46,18 +51,19 @@ Then edit .babelrc/babel.config.js:
 ```
 
 Next, if you need Text and other component, edit main.js:
-```javascript
-import Vue from 'vue'
-import { Text } from 'sk-element-webpack'
-import App from './App.vue'
 
-Vue.component(Text.name, Text)
+```javascript
+import Vue from "vue";
+import { Text } from "sk-element-webpack";
+import App from "./App.vue";
+
+Vue.component(Text.name, Text);
 /* or
  * Vue.use(Text)
  */
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App)
-})
+});
 ```

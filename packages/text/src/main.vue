@@ -1,5 +1,5 @@
 <template>
-  <div class="sk-text_background">
+  <div class="sk-text-background">
     <div>{{msg}}</div>
     <div>i18n: {{emptyText}}</div>
   </div>
@@ -27,9 +27,3 @@ export default {
 	}
 }
 </script>
-<style>
-.sk-text_background {
-  background: red
-}
-</style>
-

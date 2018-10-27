@@ -1,25 +1,26 @@
 # Text
 
 ##### Demo
+
 <Container>
   <sk-text msg="I can work"></sk-text>
 </Container>
 
-``` vue
+```vue
 <template>
   <sk-text msg="I can work"></sk-text>
 </template>
 <script>
-  export default {
-  data () {
-    return {}
+export default {
+  data() {
+    return {};
   }
-}
+};
 </script>
 ```
 
 ##### Attributes
 
-| Attribute        | Description           | Type  | Accepted values |  Default |
-| ---------------- |:---------------------:| -----:|----------------:|---------:|
-| msg              | message display       | String |        -       |   test   |
+| Attribute |   Description   |   Type | Accepted values | Default |
+| --------- | :-------------: | -----: | --------------: | ------: |
+| msg       | message display | String |               - |    test |
