@@ -1,8 +1,6 @@
 # Text
 
-##### Demo
-
-<Container>
+<Container title="base" description="This is components demo">
   <sk-text msg="I can work"></sk-text>
 </Container>
 
