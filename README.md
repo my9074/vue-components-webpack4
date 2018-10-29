@@ -97,7 +97,7 @@ new Vue({
 
 - [x] Support on-demand loading
 - [x] I18n
-- [ ] Add CLI to support rapid development
+- [x] Add CLI to support rapid development
 - [x] Example docs with vuepress
 - [ ] Unit Test
 - [x] CSS dynamic separation
