@@ -8,4 +8,7 @@ export default ({
   siteData
 }) => {
   Vue.use(SKElement)
+  router.addRoutes([
+    { path: '/', redirect: '/components/' },
+  ])
 }

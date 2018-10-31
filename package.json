@@ -4,8 +4,6 @@
   "description": "",
   "main": "./dist/sk-element.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "",
     "build:dist": "webpack --config ./build/webpack.dist.conf.js",
     "build:components": "webpack --config ./build/webpack.dist.component.conf.js",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir dist --ignore src/*.js",
