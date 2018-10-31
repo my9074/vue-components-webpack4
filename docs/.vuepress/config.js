@@ -5,44 +5,31 @@ function resolve(dir) {
 }
 
 module.exports = {
-	base: '/vue-components-webpack4/',
+  base: '/vue-components-webpack4/',
 	title: 'sk-element components',
-	description: 'sk-element UI components',
+  description: 'sk-element UI components',
 	markdown: {
 		lineNumbers: true
 	},
 	themeConfig: {
-		repo: 'my9074/vue-components-webpack4',
-		sidebarDepth: 0,
-		lastUpdated: true,
-		nav: [
-			{ text: 'Home', link: '/components/' },
+    sidebarDepth: 0,
+    lastUpdated: true,
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Github', link: 'https://github.com/my9074/vue-components-webpack4' },
+    ],
+		sidebar: [
+			'/',
+			['/quickstart', 'Quick Start'],
+			['/i18n', 'Internationalization'],
 			{
-				text: 'Contributing Guide',
-				items: [{ text: 'FAQ', link: '/guide/FAQ' }]
+				title: 'components',
+				collapsable: false,
+				children: [['/components/text', 'Text']]
 			}
-		],
-		sidebar: {
-			'/components/': [
-				'',
-				['quickstart', 'Quick Start'],
-				['i18n', 'Internationalization'],
-				{
-					title: 'components',
-					collapsable: false,
-					children: [['text', 'Text']]
-				}
-			],
-			'/guide/': [
-        {
-					title: 'FAQ',
-					collapsable: false,
-					children: [['FAQ', 'How to create a new components?']]
-				}
-      ]
-		}
-	},
-	chainWebpack: (config, isServer) => {
-		config.resolve.alias.set('@', resolve('src'))
-	}
+		]
+  },
+  chainWebpack: (config, isServer) => {
+    config.resolve.alias.set('@', resolve('src'))
+  }
 }
