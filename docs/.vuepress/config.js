@@ -5,19 +5,23 @@ function resolve(dir) {
 }
 
 module.exports = {
-  base: '/vue-components-webpack4/',
+	host: 'hosting.jdcloud.com',
+	base: '/vue-components-webpack4/',
 	title: 'sk-element components',
-  description: 'sk-element UI components',
+	description: 'sk-element UI components',
 	markdown: {
 		lineNumbers: true
 	},
 	themeConfig: {
-    sidebarDepth: 0,
-    lastUpdated: true,
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Github', link: 'https://github.com/my9074/vue-components-webpack4' },
-    ],
+		sidebarDepth: 0,
+		lastUpdated: true,
+		nav: [
+			{ text: 'Home', link: '/' },
+			{
+				text: 'Github',
+				link: 'https://github.com/my9074/vue-components-webpack4'
+			}
+		],
 		sidebar: [
 			'/',
 			['/quickstart', 'Quick Start'],
@@ -28,8 +32,21 @@ module.exports = {
 				children: [['/components/text', 'Text']]
 			}
 		]
-  },
-  chainWebpack: (config, isServer) => {
-    config.resolve.alias.set('@', resolve('src'))
-  }
+	},
+	chainWebpack: (config, isServer) => {
+		config.resolve.alias.set('@', resolve('src'))
+	},
+	plugins: [
+		[
+			require('./plugins/proxy-plugin.js'),
+			{
+				targets: {
+					'/api': {
+						target: 'http://hosting.jdcloud.com:3001',
+						changeOrigin: true
+					}
+				}
+			}
+		]
+	]
 }
