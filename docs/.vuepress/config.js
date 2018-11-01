@@ -13,25 +13,41 @@ module.exports = {
 		lineNumbers: true
 	},
 	themeConfig: {
-		sidebarDepth: 0,
 		lastUpdated: true,
 		nav: [
-			{ text: 'Home', link: '/' },
+			{ text: 'Home', link: '/components/' },
+			{
+				text: 'Contributing Guide',
+				items: [
+					{
+						text: 'Design Concepts',
+						link: '/design/'
+					},
+					{
+						text: 'FAQ',
+						link: '/guide/FAQ'
+					}
+				]
+			},
 			{
 				text: 'Github',
 				link: 'https://github.com/my9074/vue-components-webpack4'
 			}
 		],
-		sidebar: [
-			'/',
-			['/quickstart', 'Quick Start'],
-			['/i18n', 'Internationalization'],
-			{
-				title: 'components',
-				collapsable: false,
-				children: [['/components/text', 'Text']]
-			}
-		]
+		sidebar: {
+			'/components/': [
+				'',
+				['quickstart', 'Quick Start'],
+				['i18n', 'Internationalization'],
+				{
+					title: 'components',
+					collapsable: false,
+					children: [['text', 'Text']]
+				}
+			],
+			'/guide/': ['FAQ'],
+			'/design/': [['', 'Design Concepts']]
+		}
 	},
 	chainWebpack: (config, isServer) => {
 		config.resolve.alias.set('@', resolve('src'))
