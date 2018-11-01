@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const service = axios.create({
 	timeout: 30000,
+	withCredentials: true
 })
 
 service.interceptors.request.use(
