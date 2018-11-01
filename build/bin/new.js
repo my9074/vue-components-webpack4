@@ -16,6 +16,7 @@ const uppercamelcase = require('uppercamelcase')
 const componentname = process.argv[2]
 const ComponentName = uppercamelcase(componentname)
 const PackagePath = path.resolve(__dirname, '../../packages', componentname)
+const PackageDocsPath = path.resolve(__dirname, '../../docs/components')
 const Files = [
 	{
 		filename: 'index.js',
@@ -68,5 +69,10 @@ Files.forEach(file => {
 		.write(file.content, 'utf8')
 		.end('\n')
 })
+
+// 创建组件文档
+fileSave(path.join(PackageDocsPath, `${componentname}.md`))
+	.write(`# ${ComponentName}`, 'utf8')
+	.end('\n')
 
 console.log('DONE!')

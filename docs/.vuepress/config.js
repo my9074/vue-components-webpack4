@@ -1,7 +1,13 @@
 const path = require('path')
+const components = require('../../components.json')
+const uppercamelcase = require('uppercamelcase')
 
 function resolve(dir) {
 	return path.join(__dirname, '../..', dir)
+}
+
+function generatorComponents(components) {
+  return Object.keys(components).map(cm => [cm, uppercamelcase(cm)])
 }
 
 module.exports = {
@@ -42,7 +48,7 @@ module.exports = {
 				{
 					title: 'components',
 					collapsable: false,
-					children: [['text', 'Text']]
+					children: generatorComponents(components)
 				}
 			],
 			'/guide/': ['FAQ'],
