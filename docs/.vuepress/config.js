@@ -63,7 +63,7 @@ module.exports = {
 			require('./plugins/proxy-plugin.js'),
 			{
 				targets: {
-					'/api': {
+					'/api/mfaIntercept/(.*)': {
 						target: 'http://hosting.jdcloud.com:3001',
 						changeOrigin: true
 					}

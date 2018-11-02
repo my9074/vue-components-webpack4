@@ -7,7 +7,7 @@
 </template>
 <script>
 import Locale from '@/mixins/locale'
-import { fetchDemo } from '@/api/demo'
+import { initQrCodeInfo } from '@/api/demo'
 
 export default {
 	name: 'SkText',
@@ -24,7 +24,7 @@ export default {
 		}
 	},
 	created () {
-		fetchDemo()
+		initQrCodeInfo()
 	}
 }
 </script>
