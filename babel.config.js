@@ -3,14 +3,11 @@ module.exports = {
 		[
 			'@babel/preset-env',
 			{
-				modules: 'false'
+				modules: 'false',
+				exclude: ['transform-regenerator'],
+				debug: true
 			}
 		]
-	],
-	plugins: [
-		'@babel/plugin-proposal-object-rest-spread',
-		'@babel/plugin-transform-object-assign',
-		'@babel/plugin-transform-regenerator'
 	],
 	env: {
 		utils: {
