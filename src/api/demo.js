@@ -1,7 +1,9 @@
-import request from '@/api/request'
+import AxiosFactory from '@/api/axios'
+
+const axios = AxiosFactory.create()
 
 export function initQrCodeInfo() {
-	return request({
+	return axios({
 		url: '/api/mfaIntercept/bizInitQrCode',
 		method: 'POST',
 		data: {
