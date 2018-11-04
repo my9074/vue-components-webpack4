@@ -7,7 +7,7 @@ function resolve(dir) {
 }
 
 function generatorComponents(components) {
-  return Object.keys(components).map(cm => [cm, uppercamelcase(cm)])
+	return Object.keys(components).map(cm => [cm, uppercamelcase(cm)])
 }
 
 module.exports = {
@@ -18,41 +18,61 @@ module.exports = {
 	markdown: {
 		lineNumbers: true
 	},
+	locales: {
+		'/': {
+			lang: 'en-US',
+			title: 'sk-element',
+			description: 'Vue UI Components'
+		},
+		'/zh/': {
+			lang: 'zh-CN',
+			title: 'sk-element',
+			description: 'Vue 组件库模板'
+		}
+	},
 	themeConfig: {
 		lastUpdated: true,
-		nav: [
-			{ text: 'Home', link: '/components/' },
-			{
-				text: 'Contributing Guide',
-				items: [
-					{
-						text: 'Design Concepts',
-						link: '/design/'
-					},
-					{
-						text: 'FAQ',
-						link: '/guide/FAQ'
-					}
-				]
-			},
-			{
-				text: 'Github',
-				link: 'https://github.com/my9074/vue-components-webpack4'
-			}
-		],
-		sidebar: {
-			'/components/': [
-				'',
-				['quickstart', 'Quick Start'],
-				['i18n', 'Internationalization'],
-				{
-					title: 'components',
-					collapsable: false,
-					children: generatorComponents(components)
+		locales: {
+			'/': {
+				label: 'English',
+				selectText: 'Languages',
+				lastUpdated: 'Last Updated',
+				nav: require('./nav/en'),
+				sidebar: {
+					'/components/': [
+						'',
+						['quickstart', 'Quick Start'],
+						['i18n', 'Internationalization'],
+						{
+							title: 'components',
+							collapsable: false,
+							children: generatorComponents(components)
+						}
+					],
+					'/guide/': ['FAQ'],
+					'/design/': [['', 'Design Concepts']]
 				}
-			],
-			'/guide/': ['FAQ'],
-			'/design/': [['', 'Design Concepts']]
+			},
+			'/zh/': {
+				label: '简体中文',
+				selectText: '选择语言',
+				lastUpdated: '上次更新',
+				nav: require('./nav/zh'),
+				sidebar: {
+					'/zh/components/': [
+						'',
+						['quickstart', 'Quick Start'],
+						['i18n', 'Internationalization'],
+						{
+							title: 'components',
+							collapsable: false,
+							children: generatorComponents(components)
+						}
+					],
+					'/zh/guide/': ['FAQ'],
+					'/zh/design/': [['', 'Design Concepts']]
+				}
+			}
 		}
 	},
 	chainWebpack: (config, isServer) => {
