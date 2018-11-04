@@ -4,11 +4,11 @@ module.exports = {
 			'@babel/preset-env',
 			{
 				modules: 'false',
-				exclude: ['transform-regenerator'],
 				debug: true
 			}
 		]
 	],
+	plugins: ['@babel/plugin-transform-runtime'],
 	env: {
 		utils: {
 			presets: [['@babel/preset-env', { modules: 'commonjs' }]],
