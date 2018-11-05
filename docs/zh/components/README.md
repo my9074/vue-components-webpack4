@@ -1,4 +1,4 @@
-# Install
+# 安装
 
 Using npm:
 

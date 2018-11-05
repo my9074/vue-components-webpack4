@@ -61,8 +61,8 @@ module.exports = {
 				sidebar: {
 					'/zh/components/': [
 						'',
-						['quickstart', 'Quick Start'],
-						['i18n', 'Internationalization'],
+						['quickstart', '快速上手'],
+						['i18n', '国际化'],
 						{
 							title: 'components',
 							collapsable: false,
@@ -70,7 +70,7 @@ module.exports = {
 						}
 					],
 					'/zh/guide/': ['FAQ'],
-					'/zh/design/': [['', 'Design Concepts']]
+					'/zh/design/': [['', '设计理念']]
 				}
 			}
 		}
